@@ -28,7 +28,7 @@ ELSE (UNIX)
     INCLUDE_DIRECTORIES(BEFORE ${PLUGIN_SOURCE_DIR}/include)
     IF(STANDALONE MATCHES "BUNDLED")
 	# within OpenCPN tree
-    	SET(PLUGINS_LIBS ${EXTRA_LIBS} ../../buildwin/portaudio_x86)
+    	SET(PLUGINS_LIBS ${EXTRA_LIBS} ../../../buildwin/portaudio_x86)
     	INSTALL(FILES "../../buildwin/portaudio_x86.dll" DESTINATION ".")
     ELSE()
     	SET(PLUGINS_LIBS ${EXTRA_LIBS} ../buildwin/portaudio_x86)
