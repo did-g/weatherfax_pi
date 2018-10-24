@@ -1,4 +1,7 @@
 #if defined(__MSVC__)
+#if defined(__MINGW32__)
+  #include <basetsd.h>
+#else
   #include <BaseTsd.h>
   typedef int ssize_t;
   #define snprintf  _snprintf
@@ -6,6 +9,7 @@
 
   #pragma warning(disable: 4244)
   #pragma warning(disable: 4800)
+#endif
 
 #else
   /* Define to 1 if you have the <unistd.h> header file. */
